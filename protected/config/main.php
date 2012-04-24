@@ -26,6 +26,9 @@ return array(
             'enableProfiling' => true,
             'enableParamLogging' => true,
         ),
+        'authManager' => array(
+            'class' => 'PhpAuthManager',
+        ),
         'user' => array(
             'class' => 'CWebUser',
             //'loginUrl' => array('/user/login'),
