@@ -1,4 +1,5 @@
-# Weee CMS - CMS разработанная на Yii Framework
-** Установка
+## Weee CMS - CMS разработанная на Yii Framework
+** Установка **
 * скопировать файлы в корень сайта
-* создать папку protected/runtime и папку assets
+* создать папку protected/runtime и папку assets , установить права на запись для этих папок
+* импортировать дамп из файла dump.sql

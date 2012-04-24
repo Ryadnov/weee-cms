@@ -11,7 +11,17 @@ return array(
             'urlFormat' => 'path',
             'showScriptName' => false,
             'rules' => array(
+                // Module Pages
                 'page/<url:\w+>' => 'pages/main/view',
+                
+                // Module Blogs
+                'blogs/list'     => 'blogs/blog/index',
+                'blog/<url:\w+>' => 'blogs/blog/view',
+                'topic/add'      => 'blogs/post/create',
+                'topic/edit'     => 'blogs/post/update',
+                'topic/<id:\d+>' => 'blogs/post/view',
+                'topics'         => 'blogs/post/index',
+                
                 '<controller>/<id:\d+>' => '<controller>/view',
                 '<controller>/<action>' => '<controller>/<action>',
             ),
@@ -30,13 +40,10 @@ return array(
             'class' => 'PhpAuthManager',
         ),
         'user' => array(
-            'class' => 'CWebUser',
-            //'loginUrl' => array('/user/login'),
+            'class' => 'WebUser',
+            'loginUrl' => array('/users/main/login'),
             'allowAutoLogin' => true,
         ),
     ),
-    'modules' => array(
-        'pages',
-        'users',
-    )
+    'modules' => array('pages', 'users', 'blogs',)
 );

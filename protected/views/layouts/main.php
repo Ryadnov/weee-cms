@@ -7,6 +7,7 @@
 
         <link href="/css/bootstrap.css" rel="stylesheet">
         <link href="/css/app.css" rel="stylesheet">
+        <script src="/js/jquery.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,7 +16,6 @@
     </head>
 
     <body>
-
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
@@ -28,6 +28,21 @@
                     <div class="nav-collapse">
                         <ul class="nav">
                             <li><a href="/">Главная</a></li>
+                        </ul>
+                        
+                        <ul class="nav">
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Блоги <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?php echo $this->createUrl('/blogs/post/create'); ?>">Добавить запись</a></li>
+                                    <li><a href="<?php echo $this->createUrl('/blogs/blog/create'); ?>">Добавить блог</a></li>
+                                    <li><a href="<?php echo $this->createUrl('/blogs/post/index'); ?>">Все записи</a></li>
+                                    <li><a href="<?php echo $this->createUrl('/blogs/blog/index'); ?>">Список блогов</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <ul class="nav">
                             <li><a href="<?php echo $this->createUrl('/pages/main/view', array('url' => 'about')); ?>">О нас</a></li>
                         </ul>
                         
