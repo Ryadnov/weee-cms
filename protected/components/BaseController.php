@@ -3,7 +3,7 @@
 class BaseController extends CController
 {
 
-    public $layout = '//layouts/column2';
+    public $layout = '//layouts/main';
     public $crumbs = array();
 
     protected function pageNotFound()

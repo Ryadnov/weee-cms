@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Bootstrap, from Twitter</title>
+        <title><?Php echo $this->pageTitle; ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="/css/bootstrap.css" rel="stylesheet">
@@ -27,10 +27,12 @@
                     <a class="brand" href="/"><?php echo Yii::app()->name; ?></a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li class="active"><a href="/">Главная</a></li>
+                            <li><a href="/">Главная</a></li>
                             <li><a href="<?php echo $this->createUrl('/pages/main/view', array('url' => 'about')); ?>">О нас</a></li>
                         </ul>
-                    </div><!--/.nav-collapse -->
+                        
+                        <?php $this->widget('users.widgets.UserMenu'); ?>
+                    </div>
                 </div>
             </div>
         </div>

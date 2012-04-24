@@ -26,8 +26,14 @@ return array(
             'enableProfiling' => true,
             'enableParamLogging' => true,
         ),
+        'user' => array(
+            'class' => 'CWebUser',
+            //'loginUrl' => array('/user/login'),
+            'allowAutoLogin' => true,
+        ),
     ),
     'modules' => array(
         'pages',
+        'users',
     )
 );

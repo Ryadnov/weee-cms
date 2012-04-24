@@ -1,26 +1,27 @@
 <?php
 
-class PagesModule extends WebModule
+class UsersModule extends WebModule
 {
 
     public static function name()
     {
-        return 'Страницы';
+        return 'Пользователи';
     }
 
 
     public static function description()
     {
-        return 'Модуль статических страниц';
+        return 'Модуль пользователей';
     }
 
 
     public function init()
     {
         parent::init();
-        
+
         $this->setImport(array(
-            'pages.models.*',
+            'users.models.*',
+            'users.components.*',
         ));
     }
 
